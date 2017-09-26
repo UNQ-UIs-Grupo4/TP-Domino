@@ -29,13 +29,17 @@ class Pedido extends Entity {
 	}
 	
 	new(Cliente cliente, FormaDeEnvio formaDeEnvio, String nombre){
-		this.estado = new Estado("Preparando")
+		this.estado = new EstadoPedidoPreparando("Preparando")
 		this.formaDeEnvio = formaDeEnvio
 		this.nombre = nombre
 	}
 	
 	def getTiempoDeEspera(){
 		
+	}
+	def void cancelarPedido(){
+		
+	//this.estado= new EstadoPedidoCancelado()
 	}
 
 }

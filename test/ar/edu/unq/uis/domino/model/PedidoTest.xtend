@@ -39,4 +39,13 @@ class PedidoTest {
 		assertEquals(pedido.getMonto(), 1.25, 0)
 		
 	}
+	@Test 
+	def dadoUnPedidoEnEstadoPreparandoSePuedeCancelarElMismo(){
+		val Susana= new Cliente("Susana", "susana@gmail.com")
+		val pedidoSu = new Pedido(Susana, new RetiraPorElLocal(), "pedidoSu") 
+		pedidoSu.cancelarPedido
+		//el estado esperado deberia ser EstadoPedidoCancelado
+		assertEquals(pedidoSu.estado.class, EstadoPedidoPreparando)
+		
+	}
 }

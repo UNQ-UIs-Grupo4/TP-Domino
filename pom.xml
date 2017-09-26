@@ -3,7 +3,11 @@
   <groupId>grupo04</groupId>
   <artifactId>tp-domino-domain</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <parent>
+		<groupId>org.uqbar-project</groupId>
+		<artifactId>arena-xtend-parent</artifactId>
+		<version>3.6.3</version>
+	</parent>
   <build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -32,5 +36,4 @@
 			<version>3.6.3</version>
 		</dependency>
 	</dependencies>
-	
 </project>
